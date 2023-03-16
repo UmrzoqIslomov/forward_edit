@@ -103,7 +103,12 @@ def message_handler(update: Update, context: CallbackContext):
     elif log['state'] == 2:
         log['ctg'] = msg
         log['state'] = 3
-        update.message.reply_text(TEXTS['save info'][tg_user.lang], reply_markup=btns('subctg'))
+        l = "uz" if tg_user.lang == 1 else "ru"
+        d = {
+            f"name_{l}": msg
+        }
+        ctg = Category.objects.filter(**d).first()
+        update.message.reply_text(TEXTS['save info'][tg_user.lang], reply_markup=btns('subctg', ctg=ctg))
     elif log['state'] == 3:
         log['subctg'] = msg
         log['state'] = 4

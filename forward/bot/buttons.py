@@ -56,8 +56,8 @@ def btns(type=None, lang=1, ctg=None, ctgs=None):
         #             KeyboardButton(TEXTS['BackTOP'][lang])])
     elif type == "subctg":
         btn = []
-        # subctgs = Subctg.objects.filter(ctg=ctg)
-        subctgs = Subctg.objects.all()
+        subctgs = Subctg.objects.filter(ctg=ctg)
+        # subctgs = Subctg.objects.all()
         if not subctgs:
             return ReplyKeyboardMarkup([], resize_keyboard=True)
         for i in range(1, len(subctgs), 2):
