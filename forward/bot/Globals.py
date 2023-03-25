@@ -2,7 +2,6 @@ from telegram import user
 
 from bot.models import User
 
-
 TEXTS = {
     "START": "🇺🇿 Assalamu Alaykum «Forward Academy» o'quv markaziga xush kelibsiz.\n\n"
              "🇷🇺 Здравствуйте добро пожаловать в учебный центр «Forward Academy».\n\n"
@@ -14,9 +13,9 @@ TEXTS = {
         3: "Enter your name 🖊",
     },
     "HURMATLI": {
-        1: f'Hurmatli  so bolasa',
-        2: f'Hurmatli  so bolasa ruuu',
-        3: f'Hurmatli  so bolasa eng',
+        1: '🧐 Sizni qaysi kurslarimiz qiziqtiryapti ?',
+        2: '🧐 Какие курсы Вас интересуют ?',
+        3: '🧐 What courses are you interested in?',
     },
     "CONTACT": {
         1: "'Raqamni yuborish 📲' tugmasini bosgan holda raqamingizni yuboring",
@@ -74,9 +73,9 @@ TEXTS = {
         3: "level enggg"
     },
     "save info": {
-        1: "Sizning ma`lumotlaringiz saqlandi ✅, siz bizning qaysi kursimizga qiziqyapsiz 😊",
-        2: "Вашы данныу сохранены ✅, мы свяжемся с Вами в ближайшее время! 😊",
-        3: "Your information has been saved ✅, we will contact you soon! 😊"
+        1: "🤔 Qaysi daraja sizni qiziqtiryapti ?",
+        2: "🤔 Какой уровень Вас интересует ?",
+        3: "🤔 What level are you interested in ?"
     },
     "LANG": {
         1: "Tilni tanlang !!!",
@@ -98,46 +97,34 @@ TEXTS = {
         2: "Сall-центр ☎️",
         3: "Сall-center ☎️"
     },
-    "Beginner": {
-        1: "Beginner",
-        2: "Beginner",
-        3: "Beginner"
+    "Admin_Parol": {
+        1: "Parolni kiriting",
+        2: "Введите пароль",
+        3: "Enter the password"
     },
-    "Elementary": {
-        1: "Elementary",
-        2: "Elementary",
-        3: "Elementary"
+    "Error_password": {
+        1: "Siz parolni noto'g'ri kiritdingiz",
+        2: "Вы неправильно ввели пароль",
+        3: "You entered the password incorrectly",
     },
-    "Pre-Intermediate": {
-        1: "Pre-Intermediate",
-        2: "Pre-Intermediate",
-        3: "Pre-Intermediate"
+    "Xush_kelibsiz": {
+        1: "Admin bo'limiga xush kelibsiz",
+        2: "Добро пожаловать в админ панелу",
+        3: "Welcome to the admin section",
     },
-    "Intermediate": {
-        1: "Intermediate",
-        2: "Intermediate",
-        3: "Intermediate"
+    "Back": {
+        1: "◀ Orqaga",
+        2: "◀ Назад",
+        3: "◀ Back",
     },
-    "Upper-Intermediate": {
-        1: "Upper-Intermediate",
-        2: "Upper-Intermediate",
-        3: "Upper-Intermediate"
+    "ERROR": {
+        1: "Bu bo'limgaga oid hech qanday bo'lim topilmadi  ❗️",
+        2: "Разделов для этого раздела не найдено ❗️",
+        3: "ERROR"
     },
-    "IELTS": {
-        1: "IELTS",
-        2: "IELTS",
-        3: "IELTS"
+    "save info2": {
+        1: "Sizning ma`lumotlaringiz saqlandi ✅, siz bilan tez orada bog'lanamiz! 😊",
+        2: "Вашы данныу сохранены ✅, мы свяжемся с Вами в ближайшее время! 😊",
+        3: "Your information has been saved ✅, we will contact you soon! 😊"
     },
-    "Ingliz tili": {
-        1: "Ingliz tili",
-        2: "Ingliz tili ruu",
-        3: "Ingliz tili eng"
-    },
-    "Rus tili": {
-        1: "Rus tili",
-        2: "Rus tili ruu",
-        3: "Rus tili eng"
-    },
-
-
 }

@@ -11,7 +11,8 @@ class Command(BaseCommand):
         updater.dispatcher.add_handler(CommandHandler('start', start))
         updater.dispatcher.add_handler(MessageHandler(Filters.text, message_handler))
         updater.dispatcher.add_handler(MessageHandler(Filters.contact, contact_handler))
-        # updater.dispatcher.add_handler(MessageHandler(Filters.video, video_handler))
-        # updater.dispatcher.add_handler(MessageHandler(Filters.photo, photo_handler))
+        updater.dispatcher.add_handler(MessageHandler(Filters.video, video_handler))
+        updater.dispatcher.add_handler(MessageHandler(Filters.photo, photo_handler))
+
         updater.start_polling()
         updater.idle()

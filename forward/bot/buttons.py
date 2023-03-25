@@ -18,10 +18,17 @@ def btns(type=None, lang=1, ctg=None, ctgs=None):
         btn = [
             [KeyboardButton(TEXTS['CON'][lang], request_contact=True)]
         ]
+
     elif type == "lang":
         btn = [
             [KeyboardButton("🇺🇿Uz"), KeyboardButton("🇷🇺Ru"), KeyboardButton("🇺🇸En")],
         ]
+
+    elif type == "langg":
+        btn = [
+            [KeyboardButton("🇺🇿 Uz"), KeyboardButton("🇷🇺 Ru"), KeyboardButton("🇺🇸 En")],
+        ]
+
     elif type == "ctg":
         btn = []
         ctgs = Category.objects.all()
@@ -40,11 +47,11 @@ def btns(type=None, lang=1, ctg=None, ctgs=None):
                 btn2 = ctgs[i].name_ru
             else:
                 btn2 = ctgs[i].name_en
-
             btn.append([
                 KeyboardButton(btn1), KeyboardButton(btn2)
             ])
         if len(ctgs) % 2:
+
             if lang == 1:
                 btn1 = ctgs[len(ctgs) - 1].name_uz
             elif lang == 2:
@@ -52,8 +59,7 @@ def btns(type=None, lang=1, ctg=None, ctgs=None):
             else:
                 btn1 = ctgs[len(ctgs) - 1].name_en
             btn.append([KeyboardButton(btn1)])
-        # btn.append([KeyboardButton(TEXTS['Back'][lang]),
-        #             KeyboardButton(TEXTS['BackTOP'][lang])])
+
     elif type == "subctg":
         btn = []
         subctgs = Subctg.objects.filter(ctg=ctg)
@@ -69,9 +75,7 @@ def btns(type=None, lang=1, ctg=None, ctgs=None):
             btn.append([
                 KeyboardButton(subctgs[len(subctgs) - 1].name)
             ])
-
-        # btn.append([KeyboardButton(TEXTS['Back'][lang]),
-        #             KeyboardButton(TEXTS['BackTOP'][lang])])
+        # btn.append([KeyboardButton(TEXTS['Back'][lang])])
 
     return ReplyKeyboardMarkup(btn, resize_keyboard=True)
 
@@ -80,12 +84,13 @@ def admin_btn(type=None, lang=1):
     btn = []
     if type == "admin_menu":
         btn = [
-            [KeyboardButton("Reklama yuborish"), KeyboardButton("Users 👤")],
-            [KeyboardButton("Botga qaytish 🏘")]
+            [KeyboardButton('Reklama yuborish'), KeyboardButton('Users 👤')],
+            [KeyboardButton('Botga qaytish 🏘')]
         ]
+
     elif type == 'conf':
         btn = [
-            [KeyboardButton("Ha"), KeyboardButton("Yo'q")]
+            [KeyboardButton('Ha'), KeyboardButton("Yo'q")]
         ]
 
     return ReplyKeyboardMarkup(btn, resize_keyboard=True)

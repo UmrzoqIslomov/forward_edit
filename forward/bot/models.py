@@ -5,7 +5,7 @@ from django.db import models
 
 
 class Log(models.Model):
-    user_id = models.BigIntegerField()
+    user_id = models.BigIntegerField(primary_key=True)
     messages = models.JSONField(default={'state': 0})
 
 
