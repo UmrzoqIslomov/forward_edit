@@ -127,4 +127,9 @@ TEXTS = {
         2: "Вашы данныу сохранены ✅, мы свяжемся с Вами в ближайшее время! 😊",
         3: "Your information has been saved ✅, we will contact you soon! 😊"
     },
+    "Testt": {
+        1: "Test your English 🇬🇧",
+        2: "Test your English 🇬🇧",
+        3: "Test your English 🇬🇧",
+    }
 }

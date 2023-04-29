@@ -1,4 +1,4 @@
-from telegram import KeyboardButton, ReplyKeyboardMarkup
+from telegram import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 
 from bot.Globals import TEXTS
 from bot.models import Category, Subctg
@@ -11,6 +11,7 @@ def btns(type=None, lang=1, ctg=None, ctgs=None):
             [KeyboardButton(TEXTS['Lokatsiya📍'][lang]), KeyboardButton(TEXTS['forward_academy.uz'][lang])],
             [KeyboardButton(TEXTS["Instagram"][lang]), KeyboardButton(TEXTS['Telegram'][lang])],
             [KeyboardButton(TEXTS["Telegram Support"][lang]), KeyboardButton(TEXTS['Call center'][lang])],
+            [KeyboardButton(TEXTS['Testt'][lang])],
             [KeyboardButton(TEXTS['Settings'][lang])]
         ]
 
@@ -94,3 +95,15 @@ def admin_btn(type=None, lang=1):
         ]
 
     return ReplyKeyboardMarkup(btn, resize_keyboard=True)
+
+
+def inline_btns(type=None):
+    btn = []
+
+    if type == "rek":
+        btn = [
+            [InlineKeyboardButton("Start Test", callback_data="refr",
+                                  url="https://t.me/forwardacademy_test_bot")]
+        ]
+
+    return InlineKeyboardMarkup(btn)

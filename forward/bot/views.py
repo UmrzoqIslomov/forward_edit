@@ -1,6 +1,6 @@
 from telegram.ext import CallbackContext
 from telegram import Update, Bot
-from bot.buttons import btns
+from bot.buttons import btns, inline_btns
 from bot.models import *
 from bot.tgadmin import TGAdmin, rek_rasm, rek_video
 from bot.Globals import TEXTS
@@ -190,6 +190,15 @@ def message_handler(update: Update, context: CallbackContext):
         log['state'] = 10
         update.message.reply_html("+998-55-508-84-84")
 
+    elif msg == TEXTS['Testt'][tg_user.lang]:
+        log['state'] = 20
+        # update.message.reply_html("Test your English 🇬🇧")
+        context.bot.send_photo(
+            photo=open(f'media/Test bot.png', 'rb'),
+            chat_id=user.id,
+            reply_markup=inline_btns('rek')
+
+        )
     # if msg == TEXTS['Back'][tg_user.lang]:
     #     if log['state'] == 4:
     #         log['state'] = 3

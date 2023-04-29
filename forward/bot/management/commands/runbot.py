@@ -1,5 +1,5 @@
 from django.core.management import BaseCommand
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from forward.settings import TOKEN
 from bot.views import *
 
